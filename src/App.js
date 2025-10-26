@@ -6,7 +6,7 @@ export default function App() {
   const [query, setQuery] = useState("technology");
   const [darkMode, setDarkMode] = useState(false);
 
-  const API_KEY = "5678803eefbe41a89b59712d5aaae0fb"; // Get free key from newsapi.org
+  const API_KEY = process.env.REACT_APP_NEWS_API_KEY;
   const API_URL = `https://newsapi.org/v2/everything?q=${query}&language=en&apiKey=${API_KEY}`;
 
   useEffect(() => {
