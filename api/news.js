@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default async function handler(req, res) {
   const query = req.query.q || "technology";
-  const API_KEY = process.env.REACT_APP_NEWS_API_KEY1;
+  const API_KEY = process.env.REACT_APP_NEWS_API_KEY;
 
   if (!API_KEY) {
     return res.status(500).json({ error: "API key not set" });
